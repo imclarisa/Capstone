@@ -7,7 +7,7 @@ export default state => html`
     <li>Phone: 219.662.9200</li>
     <li>Instagram: <a href="instagram.com/smokeshack219">@smokeshack219</a></li>
     <form
-      action=""
+      action="https://formspree.io/f/xzbqeeon"
       method="POST"
     >
       <label>
@@ -22,3 +22,4 @@ export default state => html`
       <button type="submit">Send</button>
     </form></section></div>
 `;
+
