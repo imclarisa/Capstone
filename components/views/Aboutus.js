@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default state => html`
   <div>
-    <section id="Aboutus">
+    <section id="bio">
       Welcome to Smoke Shack! We are a small business that opened in May 2021
       and are located in Crown Point, Indiana. We are proud to offer a wide
       range of smoking products, including premium cigars, high-quality
