@@ -1,1 +1,10 @@
 export { default as logo } from "./logo.jpg";
+export { default as shop } from "./IMG_9.jpg";
+export { default as coconut } from "./IMG_8.jpg";
+export { default as rigone } from "./IMG_7.jpg";
+export { default as afm } from "./IMG_6.jpg";
+export { default as mav } from "./IMG_5.jpg";
+export { default as haring } from "./IMG_4.jpg";
+export { default as spoons } from "./IMG_3.jpg";
+export { default as terp } from "./IMG_2.jpg";
+export { default as bundle } from "./IMG_1.jpg";

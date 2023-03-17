@@ -19,4 +19,25 @@ router.get("/:id", (request, response) => {
   });
 });
 
+router.put("/:id", (request, response) => {
+  const body = request.body;
+  Fact.findByIdAndUpdate(
+    request.params.id,
+    {
+      $set: {
+        // Take note that the customer is not included, so it can't update customer once set
+        fact: body.fact
+      }
+    },
+    {
+      new: true,
+      upsert: true
+    },
+    (error, record) => {
+      if (error) return response.status(500).json(error);
+      return response.json(record);
+    }
+  );
+});
+
 module.exports = router;

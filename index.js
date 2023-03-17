@@ -35,29 +35,31 @@ router.hooks({
         : "Home"; // Add a switch case statement to handle multiple routes
     switch (view) {
       case "Home":
+        // New Axios get request utilizing already made environment variable
         axios
-          .get(`${process.env.MONGODB}/home`)
+          .get(`${process.env.FUN_FACT_API_URL}/facts`)
           .then(response => {
-            const kelvinToFahrenheit = kelvinTemp =>
-              Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
-
-            store.Home.weather = {};
-            store.Home.weather.city = response.data.name;
-            store.Home.weather.temp = kelvinToFahrenheit(
-              response.data.main.temp
-            );
-            store.Home.weather.feelsLike = kelvinToFahrenheit(
-              response.data.main.feels_like
-            );
-            store.Home.weather.description = response.data.weather[0].main;
+            // Storing retrieved data in state
+            store.Fact.facts = response.data;
+            console.log(response.data);
             done();
           })
-          .catch(err => console.log(err));
+          .catch(error => {
+            console.log("It puked", error);
+            done();
+          });
         break;
-
       default:
         done();
     }
+  },
+  already: params => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.data.view)
+        : "Home";
+
+    render(store[view]);
   }
 });
 
