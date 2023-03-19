@@ -11,6 +11,10 @@ body {
 
 }
 
+li {
+  list-style-type: none;
+}
+
 img {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -19,7 +23,6 @@ img:hover {
   webkit-filter: blur(4px);
   filter: blur(4px)
 }
-
 
 .column {
   background-color: #acabaf;
@@ -82,7 +85,7 @@ header {
 
 #logo {
   position: absolute;
-  max-width: 200px;
+  max-width: auto;
   max-height: auto;
   background-color: #acabaf;
 
@@ -122,14 +125,7 @@ header {
 }
 
 .footer {
-  position: sticky;
-  left: 0 ; right: 0; bottom: 0;
-  height:[footer-height]
-  width: auto;
-  height: auto;
 
-  background-color: #acabaf;
-  box-shadow: 0px 0px 15px #000
 }
 
 #root {
@@ -152,52 +148,20 @@ p {
   }
 }
 
-nav {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    width: auto;
-    height: auto;
-    background-color: #acabaf;
-    box-shadow: 0px 0px 15px #000
-  }
+.fas fa-bars {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  nav > i {
-    padding: 1rem;
-    font-size: 2em;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-  }
+.hidden--mobile nav-links {
+  margin: 0;
+  padding: 0;
+}
 
-  nav > ul {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    padding: 0 0;
-  }
-
-  nav > ul > li {
-    padding: 0.5rem;
-    list-style-type: none;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-  }
-
-  a:link {
-    background-color: yellow;
-  }
-
-  a:visited {
-    background-color: #acabaf;
-  }
-
-  a:hover {
-    background-color: #acabaf;
-  }
-
-  a:active {
-    background-color: hotpink;
-  }
+.nav-links {
+  list-style-type: block;
+  position: -webkit-sticky;
+  display: inline-flex;
+}
 

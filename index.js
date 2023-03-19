@@ -37,10 +37,10 @@ router.hooks({
       case "Home":
         // New Axios get request utilizing already made environment variable
         axios
-          .get(`${process.env.FUN_FACT_API_URL}/facts`)
+          .get(`${process.env.FUN_FACT_API_URL}/facts?random=1`)
           .then(response => {
             // Storing retrieved data in state
-            store.Fact.facts = response.data;
+            store.Home.facts = response.data;
             console.log(response.data);
             done();
           })
