@@ -43,17 +43,13 @@ app.use(express.json());
 app.use(logging);
 
 // Handle the request with HTTP GET method from http://localhost:4040/status
-// app.get("/status", (request, response) => {
-//   // Create the headers for response by default 200
-//   // Create the response body
-//   // End and return the response
-//   response.status(200).json({ message: "Service healthy" });
-// });
+app.get("/status", (request, response) => {
+  response.status(200).json({ message: "Service healthy" });
+});
 
-// app.post("/facts", (request, response) => {
-//   const fact1 = request.body.fact;
-
-// });
+app.post("/facts", (request, response) => {
+  response = request.body.fact;
+});
 //   // Express adds a "params" Object to requests that has an matches parameter created using the colon syntax
 app.use("/contacts", contacts);
 app.use("/facts", facts);

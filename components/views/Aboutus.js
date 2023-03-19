@@ -38,6 +38,8 @@ export default state => html`
         <img id="haring" src="${haring}" />
         <img id="mav" src="${mav}" />
         <img id="spoons" src="${spoons}" />
+        <br />
+        <br />
       </div>
     </div>
   </section>

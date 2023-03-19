@@ -15,6 +15,11 @@ img {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+img:hover {
+  webkit-filter: blur(4px);
+  filter: blur(4px)
+}
+
 
 .column {
   background-color: #acabaf;
@@ -75,6 +80,13 @@ header {
   box-shadow: 0px 0px 15px #000;
 }
 
+#logo {
+  position: absolute;
+  max-width: 200px;
+  max-height: auto;
+  background-color: #acabaf;
+
+}
 #jumbotron {
   width: auto;
   height: auto;
@@ -110,11 +122,11 @@ header {
 }
 
 .footer {
-  position: fixed;
+  position: sticky;
   left: 0 ; right: 0; bottom: 0;
   height:[footer-height]
   width: auto;
-  height: 50px;
+  height: auto;
 
   background-color: #acabaf;
   box-shadow: 0px 0px 15px #000
