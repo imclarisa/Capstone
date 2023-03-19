@@ -19,6 +19,27 @@ router.get("/:id", (request, response) => {
   });
 });
 
+router.get("/", (request, response) => {
+  if (request.query.random) {
+    Fact.aggregate([
+      {
+        $sample: { size: 1 }
+      }
+    ])
+      .then(record => {
+        response.json(record[0]);
+      })
+      .catch(error => {
+        response.status(500).json(error);
+      });
+  } else {
+    Fact.find({}, (error, record) => {
+      if (error) return response.status(500).json(error);
+      return response.json(record);
+    });
+  }
+});
+
 router.put("/:id", (request, response) => {
   const body = request.body;
   Fact.findByIdAndUpdate(
@@ -26,7 +47,7 @@ router.put("/:id", (request, response) => {
     {
       $set: {
         // Take note that the customer is not included, so it can't update customer once set
-        fact: body.fact
+        fact: body.facts
       }
     },
     {
