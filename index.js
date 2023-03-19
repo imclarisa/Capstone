@@ -33,33 +33,33 @@ router.hooks({
       params && params.data && params.data.view
         ? capitalize(params.data.view)
         : "Home"; // Add a switch case statement to handle multiple routes
-    // switch (view) {
-    // case "Home":
-    // axios
-    //   .get(
-    //     `https://api.openweathermap.org/data/2.5/weather?q=st%20louis&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
-    //   )
-    //   .then(response => {
-    //     const kelvinToFahrenheit = kelvinTemp =>
-    //       Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
+    switch (view) {
+      case "Home":
+        // New Axios get request utilizing already made environment variable
+        axios
+          .get(`${process.env.FUN_FACT_API_URL}/facts`)
+          .then(response => {
+            // Storing retrieved data in state
+            store.Fact.facts = response.data;
+            console.log(response.data);
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
+            done();
+          });
+        break;
+      default:
+        done();
+    }
+  },
+  already: params => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.data.view)
+        : "Home";
 
-    //     store.Home.weather = {};
-    //     store.Home.weather.city = response.data.name;
-    //     store.Home.weather.temp = kelvinToFahrenheit(
-    //       response.data.main.temp
-    //     );
-    //     store.Home.weather.feelsLike = kelvinToFahrenheit(
-    //       response.data.main.feels_like
-    //     );
-    //     store.Home.weather.description = response.data.weather[0].main;
-    //     done();
-    //   })
-    //   .catch(err => console.log(err));
-    // break;
-
-    // default:
-    done();
-    // }
+    render(store[view]);
   }
 });
 

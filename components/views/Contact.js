@@ -2,24 +2,21 @@ import html from "html-literal";
 
 export default state => html`
 <div>
-  <section id="Contact">
+  <section id="contact">
     <ul></ul><h2>How to Reach Us!</h2></ul>
-    <li>Phone: 219.662.9200</li>
-    <li>Instagram: <a href="instagram.com/smokeshack219">@smokeshack219</a></li>
-    <form
-      action="https://formspree.io/f/xzbqeeon"
+    <ul>Phone: 219.662.9200</ul>
+    <ul>Instagram: <a href="instagram.com/smokeshack219">@smokeshack219</a></ul>
+    <form id="form"
+      action=""
       method="POST"
     >
-      <label>
-        Your email:
-        <input type="email" name="email">
+      <label id="email">
+        <input type="email" name="email" placeholder="yourname@email.com">
       </label>
-      <label><br>
-        Your message:
-        <textarea name="message"></textarea>
+      <label id="message"><br>
+        <textarea id ="textarea" name="message" placeholder="Your message..."></textarea>
       </label><br>
 
-      <button type="submit">Send</button>
+      <button id="button" type="submit">Send</button>
     </form></section></div>
 `;
-
