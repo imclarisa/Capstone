@@ -75,38 +75,50 @@ header {
   box-shadow: 0px 0px 15px #000
 }
 
+#terp {
+  max-width: 150px;
+  border-radius: 10%;
+  box-shadow: 0px 0px 15px #000;
+}
+
+#bundle {
+  max-width: 150px;
+  border-radius: 10%;
+  box-shadow: 0px 0px 15px #000;
+}
+
 #coconut {
-  max-width: 200px;
+  max-width: 150px;
   border-radius: 10%;
   box-shadow: 0px 0px 15px #000;
 }
 
 #rigone {
-  max-width: 200px;
+  max-width: 150px;
   border-radius: 10%;
   box-shadow: 0px 0px 15px #000;
 }
 
 #afm {
-  max-width: 200px;
+  max-width: 150px;
   border-radius: 10%;
   box-shadow: 0px 0px 15px #000;
 }
 
 #mav {
-  max-width: 200px;
+  max-width: 150px;
   border-radius: 10%;
   box-shadow: 0px 0px 15px #000;
 }
 
 #haring {
-  max-width: 200px;
+  max-width: 150px;
   border-radius: 10%;
   box-shadow: 0px 0px 15px #000;
 }
 
 #spoons {
-  max-width: 200px;
+  max-width: 150px;
   border-radius: 10%;
   box-shadow: 0px 0px 15px #000;
 }
