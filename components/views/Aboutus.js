@@ -32,12 +32,14 @@ export default state => html`
         <img class="glass" id="coconut" src="${coconut}" />
         <img class="glass" id="rigone" src="${rigone}" />
         <img class="glass" id="afm" src="${afm}" />
+        <img class="glass" id="terp" src="${terp}" />
       </div>
 
       <div class="column">
         <img class="glass" id="haring" src="${haring}" />
-        <img class="glass" id="mav" src="${mav}" />
         <img class="glass " id="spoons" src="${spoons}" />
+        <img class="glass" id="mav" src="${mav}" />
+        <img class="glass" id="bundle" src="${bundle}" />
         <br />
         <br />
       </div>
