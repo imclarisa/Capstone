@@ -49,6 +49,21 @@ router.hooks({
             done();
           });
         break;
+      case "Contact":
+        // New Axios get request utilizing already made environment variable
+        axios
+          .get(`${process.env.CONTACT_API_URL}/contacts`)
+          .then(response => {
+            // Storing retrieved data in state
+            store.Contact.contacts = response.data;
+            console.log(response.data);
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
+            done();
+          });
+        break;
       default:
         done();
     }

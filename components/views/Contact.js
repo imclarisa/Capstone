@@ -10,6 +10,9 @@ export default state => html`
       action=""
       method="POST"
     >
+    <label id="name">
+        <input type="name" name="name" placeholder="John Smith">
+      </label>
       <label id="email">
         <input type="email" name="email" placeholder="yourname@email.com">
       </label>
