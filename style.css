@@ -187,6 +187,9 @@ p {
     display: none !important;
   }
 
+  @media (max-width: 549px){
+  }
+
 @media (max-width: 550px) {
     .hidden--mobile {
     display: none;
