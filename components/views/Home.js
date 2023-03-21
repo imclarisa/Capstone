@@ -4,8 +4,9 @@ import map from "../../images/map.jpg";
 
 export default state => html`
   <section id="jumbotron"><div>
+    <br />
   <h2>Smoke Shack of Crown Point</h2>
-
+    <br />
   <div class="container">
     <img class="image" id="shop" src="${shop}" alt="Store Front">
       <div class="overlay">

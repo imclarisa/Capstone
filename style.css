@@ -68,29 +68,12 @@ img:hover {
   filter: blur(4px)
 }
 
-/* .column {
-  background-color: #acabaf;
-  box-shadow: 0px 0px 15px #000
-}
-
-.row {
-  background-color: #acabaf;
-  box-shadow: 0px 0px 15px #000
-} */
-
 header {
   width: auto;
   height: auto;
   background-color: #acabaf;
   box-shadow: 0px 0px 15px #000
 }
-
-/* #shop {
-  max-width: 300px;
-  border-radius: 10%;
-  box-shadow: 0px 0px 15px #000;
-  justify-content: center;
-} */
 
 #coconut {
   max-width: 200px;

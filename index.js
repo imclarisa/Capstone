@@ -52,7 +52,7 @@ router.hooks({
       case "Contact":
         // New Axios get request utilizing already made environment variable
         axios
-          .get(`${process.env.CONTACT_API_URL}/contacts`)
+          .get(`${process.env.CONTACT_API_URL}/contact`)
           .then(response => {
             // Storing retrieved data in state
             store.Contact.contacts = response.data;
