@@ -17,9 +17,24 @@ export default state => html`
         <input type="email" name="email" placeholder="yourname@email.com">
       </label>
       <label id="message"><br>
-        <textarea id ="textarea" name="message" placeholder="Your message..."></textarea>
+        <textarea id ="textarea" name="message" rows="5" cols="45" placeholder="Your message..."></textarea>
       </label><br>
 
       <button id="button" type="submit">Send</button>
-    </form></section></div>
+    </form></section>
+
+    <table id="contacts">
+    <tr>
+      <th>Name</th>
+      <th>Message</th>
+    </tr>
+    ${state.contacts
+      .map(contact => {
+        return `<tr><td>${contact.name}</td></tr>`;
+      })
+      .join("")}
+  </table>
+
+
+    </div>
 `;

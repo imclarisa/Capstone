@@ -3,6 +3,7 @@ import html from "html-literal";
 export default state => html`
   <div>
     <section id="faq">
+      <br />
       <h3>What is Delta 8 THC?</h3>
 
       Delta-8-THC, or delta-8-tetrahydrocannabinol, is a naturally occurring
