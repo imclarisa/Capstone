@@ -29,15 +29,15 @@ export default state => html`
   <section>
     <div class="row">
       <div class="column">
-        <img id="coconut" src="${coconut}" />
-        <img id="rigone" src="${rigone}" />
-        <img id="afm" src="${afm}" />
+        <img class="glass" id="coconut" src="${coconut}" />
+        <img class="glass" id="rigone" src="${rigone}" />
+        <img class="glass" id="afm" src="${afm}" />
       </div>
 
       <div class="column">
-        <img id="haring" src="${haring}" />
-        <img id="mav" src="${mav}" />
-        <img id="spoons" src="${spoons}" />
+        <img class="glass" id="haring" src="${haring}" />
+        <img class="glass" id="mav" src="${mav}" />
+        <img class="glass " id="spoons" src="${spoons}" />
         <br />
         <br />
       </div>

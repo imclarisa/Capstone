@@ -48,7 +48,7 @@ app.get("/status", (request, response) => {
 });
 
 app.post("/facts", (request, response) => {});
-//   // Express adds a "params" Object to requests that has an matches parameter created using the colon syntax
+
 app.use("/contacts", contacts);
 app.use("/facts", facts);
 // Tell the Express app to start listening

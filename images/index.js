@@ -8,3 +8,4 @@ export { default as haring } from "./IMG_4.jpg";
 export { default as spoons } from "./IMG_3.jpg";
 export { default as terp } from "./IMG_2.jpg";
 export { default as bundle } from "./IMG_1.jpg";
+export { default as map } from "./map.jpg";
