@@ -2,6 +2,7 @@
 
 body {
   background-image: url("./images/Background2.jpg");
+  opacity: 80%;
   background-size: 50%;
   background-repeat: repeat;
   background-color: #4f4e50;
@@ -15,16 +16,59 @@ li {
   list-style-type: none;
 }
 
-img {
+.glass {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: auto;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #4f4e50;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 img:hover {
   webkit-filter: blur(4px);
   filter: blur(4px)
 }
 
-.column {
+/* .column {
   background-color: #acabaf;
   box-shadow: 0px 0px 15px #000
 }
@@ -32,7 +76,7 @@ img:hover {
 .row {
   background-color: #acabaf;
   box-shadow: 0px 0px 15px #000
-}
+} */
 
 header {
   width: auto;
@@ -41,11 +85,12 @@ header {
   box-shadow: 0px 0px 15px #000
 }
 
-#shop {
+/* #shop {
   max-width: 300px;
   border-radius: 10%;
   box-shadow: 0px 0px 15px #000;
-}
+  justify-content: center;
+} */
 
 #coconut {
   max-width: 200px;
@@ -164,4 +209,3 @@ p {
   position: -webkit-sticky;
   display: inline-flex;
 }
-

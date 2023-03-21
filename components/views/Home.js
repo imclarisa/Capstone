@@ -1,10 +1,23 @@
 import html from "html-literal";
 import shop from "../../images/IMG_9.jpg";
+import map from "../../images/map.jpg";
 
 export default state => html`
   <section id="jumbotron"><div>
   <h2>Smoke Shack of Crown Point</h2>
-  <img id="shop" src="${shop}" alt="Store Front">
+
+  <div class="container">
+    <img class="image" id="shop" src="${shop}" alt="Store Front">
+      <div class="overlay">
+        <div class="text">Smoke Shack of Crown Point</div>
+      </div>
+    </div>
+    <div class="container">
+    <img class="image" id="map" src="${map}" alt="Address">
+      <div class="overlay">
+        <div class="text">10771 Broadway, Crown Point Indiana </div>
+      </div>
+    </div>
 <section>
   <h3><ol>Store Hours</h3></ol>
     <li>Monday: 9am-9pm</li>

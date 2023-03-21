@@ -5,7 +5,7 @@ export default state => html`
   <section id="contact">
     <ul></ul><h2>How to Reach Us!</h2></ul>
     <ul>Phone: 219.662.9200</ul>
-    <ul>Instagram: <a href="instagram.com/smokeshack219">@smokeshack219</a></ul>
+    <ul>Instagram: <a href="https://www.instagram.com/smokeshack219">@smokeshack219</a></ul>
     <form id="form"
       action=""
       method="POST"

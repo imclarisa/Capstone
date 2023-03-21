@@ -18,7 +18,7 @@ router.get("/:id", (request, response) => {
     return response.json(record);
   });
 });
-
+// This will generate a single, random fact to display on the page
 router.get("/", (request, response) => {
   if (request.query.random) {
     Fact.aggregate([
@@ -46,7 +46,6 @@ router.put("/:id", (request, response) => {
     request.params.id,
     {
       $set: {
-        // Take note that the customer is not included, so it can't update customer once set
         fact: body.facts
       }
     },
