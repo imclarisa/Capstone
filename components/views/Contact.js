@@ -1,13 +1,13 @@
 import html from "html-literal";
 
-export default state => html`
+export default () => html`
 <div>
   <section id="contact">
     <ul></ul><h2>How to Reach Us!</h2></ul>
     <ul>Phone: 219.662.9200</ul>
     <ul>Instagram: <a href="https://www.instagram.com/smokeshack219">@smokeshack219</a></ul>
     <form id="form"
-      action=""
+      action="https://formspree.io/f/xqkoqqzv"
       method="POST"
     >
     <label id="name">
@@ -17,24 +17,10 @@ export default state => html`
         <input type="email" name="email" placeholder="yourname@email.com">
       </label>
       <label id="message"><br>
-        <textarea id ="textarea" name="message" rows="5" cols="45" placeholder="Your message..."></textarea>
+        <textarea id="textarea" name="message" rows="5" cols="45" placeholder="Your message..."></textarea>
       </label><br>
 
       <button id="button" type="submit">Send</button>
     </form></section>
-
-    <table id="contacts">
-    <tr>
-      <th>Name</th>
-      <th>Message</th>
-    </tr>
-    ${state.contacts
-      .map(contact => {
-        return `<tr><td>${contact.name}</td></tr>`;
-      })
-      .join("")}
-  </table>
-
-
     </div>
 `;
