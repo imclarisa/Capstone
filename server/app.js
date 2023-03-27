@@ -49,6 +49,9 @@ app.get("/status", (request, response) => {
 
 app.post("/facts", (request, response) => {});
 
+app.post("/add", (request, response) => {
+  const name1 = request.body.nameOne;
+});
 app.use("/contacts", contacts);
 app.use("/facts", facts);
 // Tell the Express app to start listening

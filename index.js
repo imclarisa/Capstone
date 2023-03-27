@@ -16,7 +16,7 @@ function render(state = store.Home) {
   ${Main(state)}
   ${Footer()}
   `;
-  afterRender();
+  afterRender(state);
   router.updatePageLinks();
 }
 
@@ -25,6 +25,31 @@ function afterRender(state) {
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
+  if (state.view === "Contact") {
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+
+      const requestData = {
+        name: inputList.name.value,
+        email: inputList.email.value,
+        message: inputList.message.value
+      };
+      console.log("request Body", requestData);
+
+      axios
+        .post(`${process.env.CONTACT_API_URL}/contacts`, requestData)
+        .then(response => {
+          store.Contact.contacts.push(response.data);
+          router.navigate("/Contact");
+        })
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
 }
 
 router.hooks({
@@ -41,7 +66,7 @@ router.hooks({
           .then(response => {
             // Storing retrieved data in state
             store.Home.facts = response.data;
-            console.log(response.data);
+            console.log(response.data, "done");
             done();
           })
           .catch(error => {

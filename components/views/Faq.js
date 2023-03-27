@@ -35,14 +35,14 @@ export default state => html`
       <h3>What is the return policy?</h3>
 
       All sales are final. Due to the nature of the products that we sell in our
-      smoke shop, we are unable to accept returns or exchanges on any of our
-      products. This includes, but is not limited to, pipes, vaporizers, rolling
-      papers, and other smoking accessories. We apologize for any inconvenience
-      this may cause. We take the quality of our products seriously and strive
-      to ensure that every item we sell is in excellent condition. If you
-      believe that a product you have received is defective, please contact us
-      within 24 hours of receipt and we will work with you to resolve the issue
-      as best as we can.
+      smoke shop, we are unable to issue refunds or accept returns or exchanges
+      on any of our products. This includes, but is not limited to, pipes,
+      vaporizers, rolling papers, and other smoking accessories. We apologize
+      for any inconvenience this may cause. We take the quality of our products
+      seriously and strive to ensure that every item we sell is in excellent
+      condition. If you believe that a product you have received is defective,
+      please contact us within 24 hours of receipt and we will work with you to
+      resolve the issue as best as we can.
     </section>
   </div>
 `;
