@@ -47,8 +47,6 @@ app.get("/status", (request, response) => {
   response.status(200).json({ message: "Service healthy" });
 });
 
-app.post("/facts", (request, response) => {});
-
 app.post("/add", (request, response) => {
   const name1 = request.body.nameOne;
 });
