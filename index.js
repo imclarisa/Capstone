@@ -66,7 +66,7 @@ router.hooks({
           .then(response => {
             // Storing retrieved data in state
             store.Home.facts = response.data;
-            console.log(response.data, "done");
+            console.log(response.data, "Call Complete");
             done();
           })
           .catch(error => {
